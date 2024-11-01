@@ -1,0 +1,523 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Carrément Jeu Theme
+v1.0 | 2024
+License: none (public domain)
+*/
+
+:root {
+    --pink: #F26B9C;
+    --red: #ED6476;
+    --orange: #FF9F5E;
+    --yellow: #F9DF4F;
+    --green: #8AE86B;
+    --cyan: #8AD9FD;
+    --blue: #9CA3EC;
+    --gray: gainsboro;
+}
+
+/***********************************************
+ * Section        : Base
+ * Description    : Styles globaux de balises
+ ***********************************************/
+
+html {
+    background-image: url("../assets/images/background-pattern-games-subtle.png");
+    background-repeat: repeat;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background: white;
+}
+
+:focus-visible {
+    outline: 2px solid black;
+}
+
+.aria {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+a {
+    color: navy;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    color: navy;
+}
+
+/***********************************************
+ * Section        : Mise en page
+ * Description    : Structure du site
+ ***********************************************/
+
+
+.cj-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.cj-mif {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.cj-mif img {
+    height: 24px;
+}
+
+.cj-cart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.cj-cart::after {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border-radius: 68px;
+    background-color: transparent;
+    transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+}
+
+.cj-cart:hover::after {
+    width: 78px;
+    height: 78px;
+    background-color: var(--yellow);
+}
+
+.cj-cart:active::after {
+    background-color: var(--cyan);
+}
+
+.cj-cart label, .cj-cart img {
+    position: relative;
+    z-index: 1;
+}
+
+.cj-cart img {
+    width: 48px;
+    height: 48px;
+    margin-left: -5px;
+}
+
+.cj-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.cj-socials {
+    display: flex;
+    list-style: none;
+    margin-right: 250px;
+    gap: 15px;
+}
+
+.cj-socials img {
+    width: 30px;
+}
+
+.cj-socials a {
+    display: block;
+}
+
+.cj-navigation {
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-top: 30px;
+    gap: 25px;
+}
+
+.cj-navigation a {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.cj-navigation .cj-ani {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    z-index: 0;
+    top: 0;
+    left: -5px;
+    transform: translateY(-50%) rotate(0deg);
+    background-color: var(--yellow);
+    transition-delay: 100ms;
+    transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
+}
+
+.cj-navigation > li {
+    position: relative;
+}
+
+.cj-navigation > li:active~.cj-ani {
+    background-color: var(--cyan);
+}
+
+.cj-navigation > li:nth-child(1):hover~.cj-ani {
+    left: -5px;
+    transform: translateY(-50%) rotate(0deg);
+}
+.cj-navigation > li:nth-child(2):hover~.cj-ani {
+    left: 77px;
+    transform: translateY(-50%) rotate(90deg);
+}
+.cj-navigation > li:nth-child(3):hover~.cj-ani {
+    left: 210px;
+    transform: translateY(-50%) rotate(180deg);
+}
+.cj-navigation > li:nth-child(4):hover~.cj-ani {
+    left: 387px;
+    transform: translateY(-50%) rotate(360deg);
+}
+
+.cj-submenu {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    height: 0;
+    bottom: -10px;
+    transform: translateY(100%);
+    background: white;
+    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.2);
+    transition: height 150ms linear, opacity 200ms ease;
+}
+
+.cj-submenu a {
+    display: block;
+    padding: 6px 6px 6px 15px;
+    font-size: 16px;
+}
+.cj-submenu a:hover {
+    background-color: var(--yellow);
+}
+.cj-submenu a:active {
+    background-color: var(--cyan);
+}
+
+.cj-submenu:hover,
+a:hover + .cj-submenu {
+    opacity: 1;
+    height: 120px;
+}
+
+.cj-slogan {
+    padding: 20px;
+    padding-bottom: 15px;
+    font-family: 'Baloo Bhaina 2', monospace;
+    font-size: 24px;
+    background-color: var(--yellow);
+}
+
+.cj-hometitle {
+    margin: 30px 0 15px 0;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cj-footer {
+    margin-top: auto;
+    background: url("../assets/images/footer-logo.png");
+    background-size: 90px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: var(--yellow);
+    border-top: 10px solid var(--pink);
+}
+
+.cj-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 10px 60px 10px;
+}
+
+.cj-footer-links li {
+    margin-bottom: 5px;
+}
+
+.cj-footer-links li + li {
+    margin-left: 10px;
+}
+
+.cj-credits {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+}
+
+/***********************************************
+ * Section        : Squares
+ * Description    : Navigation catalogue par carrés
+ ***********************************************/
+
+.cj-squares {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 10px 30px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cj-square {
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 10px solid rgba(0,0,0,0.1);
+    transition: border 500ms ease-out;
+}
+
+.cj-square::after {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/images/footer-logo.png");
+    background-size: 60px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    transition: opacity 0.2s ease;
+}
+
+.cj-square:hover {
+    border-color: rgba(0,0,0,0);
+}
+
+.cj-square:hover::after {
+    opacity: 0.2;
+}
+
+.cj-square:nth-child(7n+1) {
+    background-color: var(--orange);
+}
+.cj-square:nth-child(7n+2) {
+    background-color: var(--yellow);
+}
+.cj-square:nth-child(7n+3) {
+    background-color: var(--green);
+}
+.cj-square:nth-child(7n+4) {
+    background-color: var(--cyan);
+}
+.cj-square:nth-child(7n+5) {
+    background-color: var(--blue);
+}
+.cj-square:nth-child(7n+6) {
+    background-color: var(--pink);
+}
+.cj-square:nth-child(7n+7) {
+    background-color: var(--red);
+}
+
+.cj-square-txt {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+}
+
+.cj-square-title {
+    display: block;
+    font-family: 'Baloo Bhaina 2', monospace;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.cj-square-sub {
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    font-weight: light;
+    font-size: 14px;
+}
+
+/***********************************************
+ * Section        : Slideshow
+ * Description    : Composant de carrousel produits
+ ***********************************************/
+
+.cj-slideshow {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 10px auto;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-size: 0; /* Removes spaces */
+    background-color: var(--gray);
+    border-right: 10px solid var(--gray);
+}
+
+.cj-slidebtn {
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px; height: 32px;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+.cj-slidebtn:hover {
+    border-color: black;
+}
+.cj-slidebtn:active {
+    background-color: var(--cyan);
+}
+.cj-slidebtn:first-of-type {
+    left: 10px;
+}
+.cj-slidebtn:last-of-type {
+    right: 0;
+}
+
+.cj-slidebtn:first-of-type::before {
+    content: "<";
+}
+
+.cj-slidebtn:last-of-type::after {
+    content: ">";
+}
+
+.cj-slide {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0%; /* Aspect ratio: 16:9 (height/width * 100) */
+    transition: transform .2s linear;
+}
+
+.cj-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cj-slide {
+    margin-left: 10px;
+}
+
+/***********************************************
+ * Section        : Article
+ * Description    : Textes et paragraphes
+ ***********************************************/
+
+.cj-article {
+    width: 75%;
+    margin: 10px auto;
+    padding: 0px 10px 30px 10px;
+    text-align: justify;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.cj-article ul {
+    list-style: square;
+    margin-top: 10px;
+    margin-left: 15px;
+}

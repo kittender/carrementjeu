@@ -1,0 +1,37 @@
+/* Carrément Jeu Theme
+v1.0 | 2024
+License: none (public domain)
+*/
+
+/***********************************************
+ * Section        : Mise en page
+ * Description    : Structure du site
+ ***********************************************/
+
+@media (max-width: 1200px) {
+
+}
+
+
+/***********************************************
+ * Section        : Slideshow
+ * Description    : Composant de carrousel produits
+ ***********************************************/
+
+@media (min-width: 860px) {
+    .cj-slide {
+        width: calc(50% - 5px);
+    }
+}
+
+@media (min-width: 860px) {
+    .cj-slide img {
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cj-slideshow {
+        width: 80%;
+    }
+}

@@ -1,46 +1,169 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
 <header class="cj-header">
-    <img class="cj-logo" src="assets/header-logo.png" alt="Carrément Jeu, plus que des jeux !">
+    <h1 class="aria">Carrément Jeu</h1>
+    <h2 class="aria">Boutique française de jeux</h2>
+    <img class="cj-logo" src="assets/images/header-logo.png" alt="Carrément Jeu, plus que des jeux !">
     <div class="cj-mif">
-        <img src="assets/icon-mif.png" title="Made In France" alt="Logo MIF">
+        <img src="assets/icons/icon-mif.png" title="Made In France" alt="Logo MIF">
         <p>Conçu et Fabriqué en France</p>
     </div>
     <a href="#" class="cj-cart">
-        <img src="assets/icon-shop-cart.png" alt="Chariot de magasin">
+        <img src="assets/icons/icon-shop-cart.png" alt="Chariot de magasin">
         <label>Panier</label>
     </a>
 </header>
 <nav class="cj-menu">
     <ul class="cj-socials">
-        <li><a href="#"><img src="assets/icon-social-facebook.png" title="Facebook" alt="Notre page Facebook"></a></li>
-        <li><a href="#"><img src="assets/icon-social-instagram.png" title="Instagram" alt="Notre compte Instagram"></a></li>
-        <li><a href="#"><img src="assets/icon-social-contact.png" title="Contact" alt="Envoyez-nous un message"></a></li>
+        <li><a href="#"><img src="assets/icons/icon-social-contact.png" title="Contact" alt="Envoyez-nous un message"></a></li>
+        <li><a href="#"><img src="assets/icons/icon-social-facebook.png" title="Facebook" alt="Notre page Facebook"></a></li>
+        <li><a href="#"><img src="assets/icons/icon-social-instagram.png" title="Instagram" alt="Notre compte Instagram"></a></li>
     </ul>
     <ul class="cj-navigation">
         <li><a href="#">Accueil</a></li>
-        <li><a href="#">Présentation</a></li>
-        <li><a href="#">Jeux & Coloriages</a></li>
+        <li>
+            <a href="#">Présentation</a>
+            <ul class="cj-submenu">
+                <li><a href="#">Carrément éditeur</a></li>
+                <li><a href="#">Carrément local</a></li>
+                <li><a href="#">Carrément éducatif</a></li>
+                <li><a href="#">Carrément d'actualité</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Jeux & Coloriages</a>
+            <ul class="cj-submenu">
+                <li><a href="#">Coloriages</a></li>
+                <li><a href="#">Jeux de cartes</a></li>
+                <li><a href="#">Jeux de l'oie</a></li>
+                <li><a href="#">Memory & Loto magnétiques</a></li>
+            </ul>
+        </li>
         <li><a href="#">Personnalisation</a></li>
         <span class="cj-ani"></span>
     </ul>
 </nav>
-<p class="cj-slogan">Partager, apprendre et jouer...</p>
+<p class="cj-slogan"><span class="aria">Notre slogan: </span>Partager, apprendre et jouer...</p>
 
-<nav class="cj-slideshow" title="Produits mis en avant">
-    <button class="cj-slidebtn --previous">Produit précédent</button>
-    <button class="cj-slidebtn --next">Produit suivant</button>
-    <a href="#" class="cj-slide"><img src="assets/placeholder-product.png" title="Produit A" alt="Description du produit" /></a>
-    <a href="#" class="cj-slide"><img src="assets/placeholder-product.png" title="Produit B" alt="Description du produit" /></a>
-    <a href="#" class="cj-slide"><img src="assets/placeholder-product.png" title="Produit C" alt="Description du produit" /></a>
-    <a href="#" class="cj-slide"><img src="assets/placeholder-product.png" title="Produit D" alt="Description du produit" /></a>
-    <a href="#" class="cj-slide"><img src="assets/placeholder-product.png" title="Produit E" alt="Description du produit" /></a>
-    <a href="#" class="cj-slide"><img src="assets/placeholder-product.png" title="Produit F" alt="Description du produit" /></a>
+<h3 class="aria">Notre actualité</h3>
+<nav class="cj-slideshow" title="Carrousel de produits">
+    <button class="cj-slidebtn --previous"><span class="aria">Produit précédent</span></button>
+    <button class="cj-slidebtn --next"><span class="aria">Produit suivant</span></button>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit A" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit B" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit C" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit D" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit E" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit E" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit E" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit E" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit E" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit E" alt="Description du produit" /></a>
+    <a href="#" class="cj-slide"><img src="assets/images/placeholder-product.png" title="Produit F" alt="Description du produit" /></a>
 </nav>
+
+<h3 class="cj-hometitle">Notre catalogue</h3>
+
+<article class="cj-article">
+    <p>Jeux magnétiques, jeux optiques, jeux de cartes, coloriages et
+        bariolages, nos créations s’étoffent et se diversifient depuis 2015.
+        Nous personnalisons des jeux pour des structures muséales ou autres.
+        Nous aimons ces projets qui relèvent du défi et du partage. Nous créons des
+        illustrations dans des univers variés, fières de notre production responsable,
+        et de notre fabrication locale. Vous avez une idée, une ambition ?
+        Contactez-nous.<br></p>
+</article>
+
+<nav class="cj-squares" title="">
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Coloriages</span>
+            <span class="cj-square-sub">3 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Jeux de cartes</span>
+            <span class="cj-square-sub">7 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Jeux de l'oie</span>
+            <span class="cj-square-sub">2 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Jeux magnétiques</span>
+            <span class="cj-square-sub">6 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Animaux de la ferme</span>
+            <span class="cj-square-sub">4 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Animaux de la préhistoire</span>
+            <span class="cj-square-sub">3 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Calcul mental</span>
+            <span class="cj-square-sub">2 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Fantastique</span>
+            <span class="cj-square-sub">2 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Oiseaux</span>
+            <span class="cj-square-sub">5 produits</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Poissons</span>
+            <span class="cj-square-sub">1 produit</span>
+        </span>
+    </a>
+    <a href="#" class="cj-square">
+        <span class="cj-square-txt">
+            <span class="cj-square-title">Divers</span>
+            <span class="cj-square-sub">2 produits</span>
+        </span>
+    </a>
+</nav>
+
+<footer class="cj-footer">
+    <nav>
+        <ul class="cj-footer-links">
+            <li><a href="#">Accueil boutique</a></li>
+            <li><a href="#">Catalogue de jeux</a></li>
+            <li><a href="#">Notre équipe</a></li>
+            <li><a href="#">Notre service personnalisation</a></li>
+            <li><a href="#">Informations légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <span class="cj-ani"></span>
+        </ul>
+    </nav>
+    <p class="cj-credits">Carrément Jeu, tous droits réservées © 2024</p>
+</footer>
+
+<script src="scripts/slideshow.js"></script>
 </body>
 </html>
