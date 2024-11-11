@@ -7,9 +7,124 @@ License: none (public domain)
  * Section        : Mise en page
  * Description    : Structure du site
  ***********************************************/
+@media (max-width: 945px)  {
+    .cj-menu {
+        flex-direction: row-reverse;
+        padding: 10px 20px;
+    }
 
-@media (max-width: 1200px) {
+    .cj-socials {
+        margin-right: 0;
+    }
 
+    .cj-navigation {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 860px) {
+    .cj-logo {
+        height: 110px;
+    }
+
+    .cj-slogan {
+        font-size: 18px;
+        padding: 10px 20px;
+        padding-bottom: 5px;
+    }
+
+    .cj-socials {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 760px) {
+    .cj-mif {
+        align-self: flex-end;
+        font-size: 14px;
+    }
+
+    .cj-menu {
+        flex-direction: column-reverse;
+    }
+
+    .cj-socials {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        margin: 0;
+        transform: translateX(-50%);
+    }
+
+    .cj-footer li {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 560px) {
+    .cj-header {
+        padding-bottom: 50px;
+    }
+
+    .cj-logo {
+        display: none;
+    }
+    .cj-logo-mobile {
+        display: block;
+    }
+
+    .cj-mif {
+        position: absolute;
+        top: 125px;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cj-navigation {
+        margin-top: 0;
+    }
+
+    .cj-navigation .cj-ani {
+        display: none;
+    }
+
+    .cj-navigation > li > a::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 0;
+        left: -5px;
+        z-index: -1;
+        transform: translateY(0%) rotate(45deg);
+        background-color: transparent;
+        transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
+    }
+
+    .cj-navigation > li > a:focus::before,
+    .cj-navigation > li > a:hover::before {
+        width: 38px;
+        height: 38px;
+        transform: translateY(-50%) rotate(0deg);
+        background-color: var(--yellow);
+    }
+
+    .cj-navigation > li > a:active::before {
+        background-color: var(--cyan);
+    }
+}
+
+@media (max-width: 480px) {
+    .cj-logo-mobile {
+        display: none;
+    }
+    .cj-logo-mini {
+        display: block;
+    }
+    .cj-mif {
+        top: 100px;
+    }
 }
 
 
@@ -33,5 +148,22 @@ License: none (public domain)
 @media (min-width: 1200px) {
     .cj-slideshow {
         width: 80%;
+    }
+}
+
+
+/***********************************************
+ * Section        : Squares
+ * Description    : Navigation catalogue par carrés
+ ***********************************************/
+
+@media (max-width: 760px) {
+    .cj-square {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cj-square-title {
+        font-size: 20px;
     }
 }
