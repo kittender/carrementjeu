@@ -92,6 +92,10 @@ body {
     background: white;
 }
 
+img {
+    max-width: 100%;
+}
+
 :focus-visible {
     outline: 2px solid black;
 }
@@ -108,6 +112,11 @@ body {
     border: 0 !important;
 }
 
+.zindex {
+    position: relative;
+    z-index: 1;
+}
+
 a {
     color: navy;
 }
@@ -122,10 +131,9 @@ a:active {
 }
 
 /***********************************************
- * Section        : Mise en page
- * Description    : Structure du site
+ * Section        : Header
+ * Description    : En-têtes et logos
  ***********************************************/
-
 
 .cj-header {
     display: flex;
@@ -163,6 +171,12 @@ a:active {
 .cj-mif img {
     height: 24px;
 }
+
+
+/***********************************************
+ * Section        : Cart
+ * Description    : Bouton d'accès au panier
+ ***********************************************/
 
 .cj-cart {
     position: relative;
@@ -207,6 +221,12 @@ a:active {
     margin-left: -5px;
 }
 
+
+/***********************************************
+ * Section        : Menu
+ * Description    : Liens sociaux et navigation
+ ***********************************************/
+
 .cj-menu {
     display: flex;
     flex-wrap: wrap;
@@ -229,6 +249,12 @@ a:active {
 .cj-socials a {
     display: block;
 }
+
+
+/***********************************************
+ * Section        : Navigation
+ * Description    : Menu principal du site
+ ***********************************************/
 
 .cj-navigation {
     position: relative;
@@ -285,6 +311,12 @@ a:active {
     transform: translateY(-50%) rotate(360deg);
 }
 
+
+/***********************************************
+ * Section        : Submenu
+ * Description    : Listes déroulantes de la navigation
+ ***********************************************/
+
 .cj-submenu {
     opacity: 0;
     overflow: hidden;
@@ -318,6 +350,11 @@ a:hover + .cj-submenu {
     height: 120px;
 }
 
+/***********************************************
+ * Section        : Titres
+ * Description    : Textes clefs notamment de l'accueil
+ ***********************************************/
+
 .cj-slogan {
     padding: 20px;
     padding-bottom: 15px;
@@ -332,6 +369,12 @@ a:hover + .cj-submenu {
     font-size: 20px;
     text-align: center;
 }
+
+
+/***********************************************
+ * Section        : Footer
+ * Description    : Liens du pied de page
+ ***********************************************/
 
 .cj-footer {
     margin-top: auto;
@@ -352,6 +395,17 @@ a:hover + .cj-submenu {
 
 .cj-footer-links li + li {
     margin-left: 10px;
+}
+
+.cj-socials-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.cj-socials-footer img {
+    width: 32px;
 }
 
 .cj-credits {
@@ -537,10 +591,107 @@ a:hover + .cj-submenu {
     text-align: justify;
     font-size: 17px;
     line-height: 1.4;
+    box-sizing: border-box;
+}
+
+.cj-article h3,
+.cj-article h4,
+.cj-article h5,
+.cj-article h6 {
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 .cj-article ul {
     list-style: square;
     margin-top: 10px;
     margin-left: 15px;
+}
+
+.cj-article-image img {
+    margin: 10px 0;
+}
+
+.cj-carrement  {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cj-carrement .cj-article {
+    order: 2;
+    width: 50%;
+    margin: 0;
+    padding: 0 30px 30px 30px;
+}
+
+.cj-carrement .cj-article:target {
+    order: 1;
+}
+
+.cj-carrement .cj-article h3 {
+    position: relative;
+}
+.cj-carrement .cj-article h3::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    transform: translate(-33%,-33%);
+}
+
+.cj-carrement .cj-article:nth-child(5n+1) h3::before {
+    background-color: var(--yellow);
+}
+.cj-carrement .cj-article:nth-child(5n+2) h3::before {
+    background-color: var(--green);
+}
+.cj-carrement .cj-article:nth-child(5n+3) h3::before {
+    background-color: var(--blue);
+}
+.cj-carrement .cj-article:nth-child(5n+4) h3::before {
+    background-color: var(--orange);
+}
+.cj-carrement .cj-article:nth-child(5n+5) h3::before {
+    background-color: var(--red);
+}
+
+
+/***********************************************
+ * Section        : Galerie
+ * Description    : Grilles d'images
+ ***********************************************/
+
+.cj-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none !important;
+}
+
+.cj-gallery > li {
+    width: calc((100% / 3) - 30px);
+    margin: 10px;
+}
+
+.cj-gallery > li > a {
+    text-decoration: none;
+}
+
+.cj-gallery figcaption {
+    margin-top: 10px;
+}
+
+.cj-thumbnail {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-top: 100%;
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.25);
+}
+.cj-thumbnail img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: none;
+    max-height: 100%;
 }

@@ -167,3 +167,21 @@ License: none (public domain)
         font-size: 20px;
     }
 }
+
+
+/***********************************************
+ * Section        : Article
+ * Description    : Textes et paragraphes
+ ***********************************************/
+
+@media (max-width: 960px) {
+    .cj-carrement {
+        margin-top: 20px;
+    }
+
+    .cj-carrement .cj-article {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+}
