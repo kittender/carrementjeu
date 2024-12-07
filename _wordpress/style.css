@@ -1,3 +1,14 @@
+/*
+Theme Name: Carrément Nous
+Theme URI: https://carrementjeu.com/
+Author: Mélina DONATI
+Description: Apparence de la boutique Carrément Jeu
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: carrement-nous
+*/
+
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
@@ -54,7 +65,6 @@ License: none (public domain)
 
 :root {
     --purple: rgba(157,109,166);
-    --pink: rgba(246,165,215);
     --red: rgba(226,111,104);
     --brown: rgba(155,109,94);
     --orange: rgba(242,166,73);
@@ -65,7 +75,7 @@ License: none (public domain)
     /* Lights colors */
     --gray: gainsboro;
     --lavender: rgba(205,189,216);
-    --rose: rgba(250,211,194);
+    --pink: rgba(250,211,194);
     --taupe: rgba(210,188,170);
     --peach: rgba(253,213,139);
     --sand: rgba(255,240,156);
@@ -78,7 +88,7 @@ License: none (public domain)
  ***********************************************/
 
 html {
-    background-image: url("../assets/images/background-pattern.png");
+    background-image: url("assets/images/background-pattern.png");
     background-repeat: repeat;
 }
 
@@ -145,19 +155,19 @@ a:active {
 
 .cj-logo {
     width: auto;
-    height: 150px;
+    height: 150px !important;
 }
 
 .cj-logo-mobile {
     display: none;
     width: auto;
-    height: 90px;
+    height: 90px !important;
 }
 
 .cj-logo-mini {
     display: none;
     width: auto;
-    height: 50px;
+    height: 50px !important;
 }
 
 .cj-mif {
@@ -318,7 +328,7 @@ a:active {
  * Description    : Listes déroulantes de la navigation
  ***********************************************/
 
-.cj-submenu {
+.sub-menu {
     opacity: 0;
     overflow: hidden;
     position: absolute;
@@ -332,21 +342,21 @@ a:active {
     transition: height 150ms linear, opacity 200ms ease;
 }
 
-.cj-submenu a {
+.sub-menu a {
     display: block;
     padding: 6px 6px 6px 15px;
     font-size: 16px;
 }
-.cj-submenu a:hover {
+.sub-menu a:hover {
     background-color: var(--yellow);
 }
-.cj-submenu a:active {
+.sub-menu a:active {
     background-color: var(--cyan);
 }
 
-.cj-submenu:hover,
-.cj-submenu:focus-within,
-a:hover + .cj-submenu {
+.sub-menu:hover,
+.sub-menu:focus-within,
+a:hover + .sub-menu {
     opacity: 1;
     height: 120px;
 }
@@ -361,7 +371,7 @@ a:hover + .cj-submenu {
     padding-bottom: 15px;
     font-family: 'Baloo Bhaina 2', monospace;
     font-size: 24px;
-    background-color: var(--pink);
+    background-color: var(--sand);
 }
 
 .cj-hometitle {
@@ -379,7 +389,7 @@ a:hover + .cj-submenu {
 
 .cj-footer {
     margin-top: auto;
-    background-color: var(--yellow);
+    background-color: var(--sand);
     border-top: 10px solid var(--pink);
 }
 
@@ -450,7 +460,7 @@ a:hover + .cj-submenu {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("../assets/images/footer-logo.png");
+    background: url("assets/images/footer-logo.png");
     background-size: 60px;
     background-position: top left;
     background-repeat: no-repeat;
@@ -466,16 +476,16 @@ a:hover + .cj-submenu {
 }
 
 .cj-square:nth-child(7n+1) {
-    background-color: var(--green);
+    background-color: var(--yellow);
 }
 .cj-square:nth-child(7n+2) {
-    background-color: var(--blue);
+    background-color: var(--green);
 }
 .cj-square:nth-child(7n+3) {
-    background-color: var(--purple);
+    background-color: var(--blue);
 }
 .cj-square:nth-child(7n+4) {
-    background-color: var(--yellow);
+    background-color: var(--purple);
 }
 .cj-square:nth-child(7n+5) {
     background-color: var(--brown);

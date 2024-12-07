@@ -56,43 +56,54 @@
 </nav>
 <p class="cj-slogan"><span class="aria">Notre slogan: </span>Partager, apprendre et jouer...</p>
 
-<main class="cj-carrement">
-    <article id="carrement-editeur" class="cj-article">
-        <h3 class="cj-hometitle"><span class="zindex">Carrément éditeur</span></h3>
-        <p>Nous concevons, dessinons et éditons des jeux de société et des coloriages non genrés, fabriqués en France.
-            Pour tous les âges, nous proposons des jeux magnétiques, des jeux de cartes et des coloriages.
-            Nous sommes des inconditionnelles du plaisir, du partage et des découvertes !</p>
-        <figure class="cj-article-image">
-            <img src="medias/presentation-dessiner.png" />
-        </figure>
-    </article>
-    <article id="carrement-local" class="cj-article cj-article-square">
-        <h3 class="cj-hometitle"><span class="zindex">Carrément local</span></h3>
-        <p>Des magnets fabriqués à deux pas de chez nous (40 Landes).
-            Des cartes imprimées localement avec des encres végétales, sur du papier recyclé FSC ou PEFC. Nos imprimeurs sont certifiés Imprim'vert.
-            Bref, une fabrication éco-responsable.</p>
-        <figure class="cj-article-image">
-            <img src="medias/presentation-encadre.png" />
-        </figure>
-    </article>
-    <article id="carrement-educatif" class="cj-article cj-article-square">
-        <h3 class="cj-hometitle"><span class="zindex">Carrément éducatif</span></h3>
-        <p>Observer, nommer, mémoriser, coordonner, discriminer, se concentrer, compter,...
-            Partager, apprendre et jouer c'est notre vision.</p>
-        <figure class="cj-article-image">
-            <img src="medias/presentation-educatif.png" />
-        </figure>
-    </article>
-    <article id="carrement-actualite" class="cj-article">
-        <h3 class="cj-hometitle"><span class="zindex">Carrément d'actualité</span></h3>
-        <ul>
-            <li>14 et 15 janvier 2025, Museum Connection, Paris</li>
-            <li>10 Octobre 2024, 63e congrès FFTS (Fédération Française Tourisme & Patrimoine souterrain), Grottes Chauvet 2 - Ardèche</li>
-        </ul>
-        <figure class="cj-article-image">
-            <img src="medias/presentation-stand.jpg" />
-        </figure>
-    </article>
+<main>
+    <div class="product-page">
+
+        <!-- Image produit -->
+        <div class="product-gallery">
+            <img src="medias/memoloie-recto.jpg" alt="MEMOLOIE SAUT DE L’OIE">
+            <div class="thumbnails">
+                <img src="medias/memoloie-recto.jpg" alt="Miniature 1">
+                <img src="medias/memoloie-verso.jpg" alt="Miniature 2">
+            </div>
+        </div>
+
+        <!-- Détails produit -->
+        <div class="product-details">
+            <h1 class="product-title">MEMOLOIE SAUT DE L’OIE</h1>
+            <p class="product-price">42,00€</p>
+            <p class="product-description">
+                <h5><strong><span style="color: #e2001a;">Memoloie,</span> <span style="color: #808080;">jeu de parcours et de hasard pour s’entrainer au calcul mental,</span></strong></h5>
+                <h5><span style="color: #808080;"><strong style="font-family: inherit; font-size: 1em;">+ de 6 ans, 2 à 6 joueurs.</strong></span></h5>
+                <h5><strong><span style="color: #e2001a;">Saut de l’oie,</span><span style="color: #808080;"> jeu de parcours et de hasard pour se familiariser avec les nombres de 1 à 12, </span></strong></h5>
+                <h5><span style="color: #808080;"><strong>+ 4 ans, 2 à 6 joueurs.</strong></span></h5>
+                <p><span style="color: #ff0000;">Conçu et fabriqué en France</span></p>
+                <h5 style="text-align: center;"><strong style="font-family: inherit; font-size: 1em; text-align: center;"><span style="color: #ff0000;">Nominé EDUCAflip 2019 qui récompense les meilleurs jeux éducatifs de l’année.</span></strong></h5>
+            </p>
+            <form class="add-to-cart" action="#">
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <button type="submit" class="add-to-cart-button">Ajouter au panier</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Produits similaires -->
+    <div class="related-products">
+        <h2>Produits Similaires</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="produit1.jpg" alt="Produit 1">
+                <h3>Produit 1</h3>
+                <p>39,99 €</p>
+            </div>
+            <div class="product-item">
+                <img src="produit2.jpg" alt="Produit 2">
+                <h3>Produit 2</h3>
+                <p>29,99 €</p>
+            </div>
+        </div>
+    </div>
 </main>
 
 <footer class="cj-footer">

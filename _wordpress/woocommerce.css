@@ -1,0 +1,81 @@
+/* Carrément Jeu Theme Boutique
+v1.0 | 2024
+License: none (public domain)
+*/
+
+:root {
+    --purple: rgba(157,109,166);
+    --red: rgba(226,111,104);
+    --brown: rgba(155,109,94);
+    --orange: rgba(242,166,73);
+    --yellow: rgba(255,240,40);
+    --green: rgba(163,183,74);
+    --cyan: rgba(177,203,231);
+    --blue: rgba(110,139,194);
+    /* Lights colors */
+    --gray: gainsboro;
+    --lavender: rgba(205,189,216);
+    --pink: rgba(250,211,194);
+    --taupe: rgba(210,188,170);
+    --peach: rgba(253,213,139);
+    --sand: rgba(255,240,156);
+    --mint: rgba(229,234,168);
+}
+
+/***********************************************
+ * Section        : Typographie
+ * Description    : Elements textuels
+ ***********************************************/
+
+.woocommerce-page h1 {
+    position: relative;
+    margin: 30px 0 30px 0;
+    padding: 0 0 5px 90px;
+    font-family: 'Baloo Bhaina 2', monospace;
+    font-weight: 700;
+    font-size: 28px;
+    color: black;
+    border-bottom: 4px solid var(--lavender);
+}
+.woocommerce-page h1::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    z-index: 0;
+    top: 0;
+    left: 15px;
+    transform: translateY(-25%) rotate(25deg);
+    background-color: var(--purple);
+}
+
+.theme-carrementnous .woocommerce .single-product .product .price {
+    font-family: 'Baloo Bhaina 2', monospace;
+    font-weight: 700;
+    font-size: 32px;
+    color: black;
+}
+
+.theme-carrementnous .woocommerce-product-details__short-description {
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/***********************************************
+ * Section        : Mise en page
+ * Description    : Elements visuels
+ ***********************************************/
+
+.theme-carrementnous .woocommerce .product .images .flex-control-thumbs {
+    margin-top: 15px;
+}
+
+.theme-carrementnous .woocommerce .product .images .flex-control-thumbs img {
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: border-color 300ms ease-in;
+}
+.theme-carrementnous .woocommerce .product .images .flex-control-thumbs img.flex-active {
+    border-color: var(--purple);
+}
