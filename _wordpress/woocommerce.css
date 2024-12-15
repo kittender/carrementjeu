@@ -3,25 +3,6 @@ v1.0 | 2024
 License: none (public domain)
 */
 
-:root {
-    --purple: rgba(157,109,166);
-    --red: rgba(226,111,104);
-    --brown: rgba(155,109,94);
-    --orange: rgba(242,166,73);
-    --yellow: rgba(255,240,40);
-    --green: rgba(163,183,74);
-    --cyan: rgba(177,203,231);
-    --blue: rgba(110,139,194);
-    /* Lights colors */
-    --gray: gainsboro;
-    --lavender: rgba(205,189,216);
-    --pink: rgba(250,211,194);
-    --taupe: rgba(210,188,170);
-    --peach: rgba(253,213,139);
-    --sand: rgba(255,240,156);
-    --mint: rgba(229,234,168);
-}
-
 /***********************************************
  * Section        : Typographie
  * Description    : Elements textuels

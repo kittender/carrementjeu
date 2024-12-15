@@ -62,14 +62,24 @@ License: none (public domain)
     --green: rgba(163,183,74);
     --cyan: rgba(177,203,231);
     --blue: rgba(110,139,194);
+	
     /* Lights colors */
     --gray: gainsboro;
     --lavender: rgba(205,189,216);
-    --rose: rgba(250,211,194);
+    --sakura: rgba(250,211,194);
     --taupe: rgba(210,188,170);
     --peach: rgba(253,213,139);
     --sand: rgba(255,240,156);
     --mint: rgba(229,234,168);
+
+    /* Catalog */
+    --plum: #9c6da3;
+    --rose: #E399BE;
+    --brick: #de675f;
+    --mandarin: #F1A849;
+    --lemon: #F5E400;
+    --lime: #a5b747;
+    --horizon: #63b8dd;
 }
 
 /***********************************************
@@ -465,32 +475,48 @@ a:hover + .cj-submenu {
     opacity: 0.2;
 }
 
-.cj-square:nth-child(7n+1) {
-    background-color: var(--green);
+.cj-square:nth-child(10n+1) {
+    background-color: var(--mandarin);
 }
-.cj-square:nth-child(7n+2) {
-    background-color: var(--blue);
+.cj-square:nth-child(10n+2) {
+    background-color: var(--rose);
 }
-.cj-square:nth-child(7n+3) {
-    background-color: var(--purple);
+.cj-square:nth-child(10n+3) {
+    background-color: var(--lemon);
 }
-.cj-square:nth-child(7n+4) {
-    background-color: var(--yellow);
+.cj-square:nth-child(10n+4) {
+    background-color: var(--lime);
 }
-.cj-square:nth-child(7n+5) {
-    background-color: var(--brown);
+.cj-square:nth-child(10n+5) {
+    background-color: var(--horizon);
 }
-.cj-square:nth-child(7n+6) {
-    background-color: var(--orange);
+.cj-square:nth-child(10n+6) {
+    background-color: var(--plum);
 }
-.cj-square:nth-child(7n+7) {
-    background-color: var(--red);
+.cj-square:nth-child(10n+7) {
+    background-color: var(--horizon);
+}
+.cj-square:nth-child(10n+8) {
+    background-color: var(--plum);
+}
+.cj-square:nth-child(10n+9) {
+    background-color: var(--brick);
+}
+.cj-square:nth-child(10n+10) {
+    background-color: var(--lemon);
 }
 
 .cj-square-txt {
     position: relative;
     z-index: 1;
     margin-top: auto;
+    color: white;
+}
+
+
+.cj-square:nth-child(10n+3) .cj-square-txt,
+.cj-square:nth-child(10n+10) .cj-square-txt {
+    color: var(--plum);
 }
 
 .cj-square-title {

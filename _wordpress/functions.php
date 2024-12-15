@@ -68,4 +68,38 @@ function carrement_nous_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'carrement_nous_enqueue_scripts');
 
 
+function theme_setup() {
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'theme_setup');
+
+function add_four_pages_metabox() {
+    add_meta_box(
+        'four_pages_selector', // ID
+        'Sélectionner 4 pages', // Titre
+        'render_four_pages_metabox', // Fonction de rendu
+        'page', // Écran
+        'side', // Contexte
+        'default' // Priorité
+    );
+}
+add_action('add_meta_boxes', 'add_four_pages_metabox');
+
+function render_four_pages_metabox($post) {
+    // Récupérer les valeurs existantes
+    $selected_pages = get_post_meta($post->ID, '_four_pages_ids', true);
+    ?>
+
+    <p>Saisissez les IDs des pages séparés par une virgule (exemple: 12,34,56,78).</p>
+    <input type="text" name="four_pages_ids" value="<?php echo esc_attr($selected_pages); ?>" style="width: 100%;">
+    <?php
+}
+
+// Sauvegarder les données lors de la mise à jour
+function save_four_pages_meta($post_id) {
+    if (array_key_exists('four_pages_ids', $_POST)) {
+        update_post_meta($post_id, '_four_pages_ids', sanitize_text_field($_POST['four_pages_ids']));
+    }
+}
+add_action('save_post', 'save_four_pages_meta');
 ?>

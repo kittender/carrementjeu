@@ -16,11 +16,21 @@ License: none (public domain)
     /* Lights colors */
     --gray: gainsboro;
     --lavender: rgba(205,189,216);
-    --rose: rgba(250,211,194);
+    --sakura: rgba(250,211,194);
     --taupe: rgba(210,188,170);
     --peach: rgba(253,213,139);
     --sand: rgba(255,240,156);
     --mint: rgba(229,234,168);
+
+    /* Catalog */
+    --plum: #9c6da3;
+    --rose: #E399BE;
+    --brick: #de675f;
+    --mandarin: #F1A849;
+    --lemon: #F5E400;
+    --lime: #a5b747;
+    --horizon: #63b8dd;
+
 }
 
 /***********************************************
