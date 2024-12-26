@@ -256,6 +256,20 @@ a:active {
     margin-left: -5px;
 }
 
+.cj-cart-count {
+    position: absolute;
+    top: 0; right: 0;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border-radius: 100%;
+}
+
 
 /***********************************************
  * Section        : Menu

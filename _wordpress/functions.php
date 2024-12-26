@@ -67,6 +67,13 @@ function carrement_nous_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'carrement_nous_enqueue_scripts');
 
+function carrement_nous_libelles_woocommerce( $text ) {
+    return 'Ajouter 🛒';
+}
+add_filter( 'woocommerce_product_add_to_cart_text', 'carrement_nous_libelles_woocommerce' ); // Page boutique et catégories
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'carrement_nous_libelles_woocommerce' ); // Page produit individuelle
+add_filter( 'woocommerce_product_add_to_cart_text', 'carrement_nous_libelles_woocommerce' ); // Bouton sur les grilles
+
 
 function theme_setup() {
     add_theme_support('post-thumbnails');

@@ -20,9 +20,10 @@
         <img src="<?php echo THEME_ASSETS; ?>/icons/icon-mif.png" title="Made In France" alt="Logo MIF">
         <p>Conçu et Fabriqué en France</p>
     </div>
-    <a href="#" class="cj-cart">
-        <img src="<?php echo THEME_ASSETS; ?>/icons/icon-shop-cart.png" alt="Chariot de magasin">
+    <a href="<?php echo wc_get_cart_url(); ?>" class="cj-cart">
+        <img src="<?php echo THEME_ASSETS; ?>/icons/icon-shop-cart.png" alt="🛒">
         <label>Panier</label>
+        <span class="cj-cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
     </a>
 </header>
 
@@ -44,5 +45,3 @@
     ));
     ?>
 </nav>
-
-<p class="cj-slogan"><span class="aria">Notre slogan: </span><?php bloginfo('description'); ?></p>
