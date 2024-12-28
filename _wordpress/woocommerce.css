@@ -4,6 +4,79 @@ License: none (public domain)
 */
 
 /***********************************************
+ * Section        : En-tête boutique
+ * Description    : Elements visuels
+ ***********************************************/
+
+.cj-shophead,
+.cj-shophead-user,
+.cj-shophead-categories {
+    display: flex;
+    align-items: center;
+}
+
+.cj-shophead {
+    margin-bottom: 20px;
+    padding: 5px 30px;
+    font-size: 16px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 100px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.cj-shophead-categories > * + *,
+.cj-shophead-user > * + *,
+.cj-shophead > * + * {
+    margin-left: 10px;
+}
+
+.cj-shophead-user {
+    margin-left: auto;
+}
+
+.cj-shophead-categories {
+    font-size: 14px;
+}
+.cj-shophead-categories a {
+    display: inline-block;
+    padding: 2px 5px;
+    text-decoration: none;
+    background-color: var(--pink);
+    border-radius: 100px;
+}
+
+.cj-shophead-categories li:nth-child(10n+1) a {
+    background-color: var(--mandarin);
+}
+.cj-shophead-categories li:nth-child(10n+2) a {
+    background-color: var(--rose);
+}
+.cj-shophead-categories li:nth-child(10n+3) a {
+    background-color: var(--lemon);
+}
+.cj-shophead-categories li:nth-child(10n+4) a {
+    background-color: var(--lime);
+}
+.cj-shophead-categories li:nth-child(10n+5) a {
+    background-color: var(--horizon);
+}
+.cj-shophead-categories li:nth-child(10n+6) a {
+    background-color: var(--plum);
+}
+.cj-shophead-categories li:nth-child(10n+7) a {
+    background-color: var(--horizon);
+}
+.cj-shophead-categories li:nth-child(10n+8) a {
+    background-color: var(--plum);
+}
+.cj-shophead-categories li:nth-child(10n+9) a {
+    background-color: var(--brick);
+}
+.cj-shophead-categories li:nth-child(10n+10) a {
+    background-color: var(--lemon);
+}
+
+/***********************************************
  * Section        : Typographie
  * Description    : Elements textuels
  ***********************************************/
@@ -127,6 +200,7 @@ License: none (public domain)
  * Description    : Elements visuels
  ***********************************************/
 
+
 .woocommerce-page .cj-single article {
     padding: 30px 10px;
 }
@@ -191,11 +265,6 @@ License: none (public domain)
     font-weight: 400;
 }
 
-.theme-carrementnous .woocommerce .related.products {
-    padding: 15px;
-    background-color: var(--sakura);
-}
-
 .theme-carrementnous .is-large.wc-block-cart .wc-block-cart-items td {
     padding: 10px 0 10px 15px;
 }
@@ -209,6 +278,11 @@ License: none (public domain)
     text-decoration: none;
 }
 
+.theme-carrementnous .wp-element-button {
+    border: none;
+}
+
+.theme-carrementnous .wp-element-button,
 .theme-carrementnous .wc-block-cart__submit-button,
 .theme-carrementnous .woocommerce button.single_add_to_cart_button.button,
 .theme-carrementnous a.add_to_cart_button.button,
@@ -222,6 +296,7 @@ License: none (public domain)
     transition: all 250ms linear;
 }
 
+.theme-carrementnous .wp-element-button:hover,
 .theme-carrementnous .wc-block-cart__submit-button:hover,
 .theme-carrementnous .woocommerce button.single_add_to_cart_button.button:hover,
 .theme-carrementnous a.add_to_cart_button.button:hover,
@@ -229,6 +304,7 @@ License: none (public domain)
     background-color: var(--yellow);
 }
 
+.theme-carrementnous .wp-element-button:active,
 .theme-carrementnous .wc-block-cart__submit-button:active,
 .theme-carrementnous .woocommerce button.single_add_to_cart_button.button:active,
 .theme-carrementnous a.add_to_cart_button.button:active,
@@ -258,38 +334,9 @@ License: none (public domain)
     border-radius: 10px;
     padding: 3px 9px;
     text-decoration: none;
+    background-color: var(--gray);
 }
 
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+1) {
-    background-color: var(--mandarin);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+2) {
-    background-color: var(--rose);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+3) {
-    background-color: var(--lemon);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+4) {
-    background-color: var(--lime);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+5) {
-    background-color: var(--horizon);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+6) {
-    background-color: var(--plum);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+7) {
-    background-color: var(--horizon);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+8) {
-    background-color: var(--plum);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+9) {
-    background-color: var(--brick);
-}
-.theme-carrementnous .product_meta [rel="tag"]:nth-child(10n+10) {
-    background-color: var(--lemon);
-}
 
 .theme-carrementnous .woocommerce .product_meta [rel="tag"]:hover {
     box-shadow: 1px 1px 2px rgba(0,0,0,0.5);

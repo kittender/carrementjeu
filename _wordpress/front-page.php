@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<p class="cj-slogan"><span class="aria">Notre slogan: </span><?php bloginfo('description'); ?></p>
-
 <main>
     <h3 class="aria">Notre actualité</h3>
     <nav class="cj-slideshow" title="Carrousel de nouveautés">

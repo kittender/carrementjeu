@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+if ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
+    get_header( 'shop' ); // Utilise header-shop.php
+} else {
+    get_header(); // Utilise le header standard
+}
+?>
 
 <main class="cj-single">
     <?php

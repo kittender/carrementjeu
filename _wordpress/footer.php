@@ -17,7 +17,7 @@
             <li><a href="#"><img src="<?php echo THEME_ASSETS; ?>/icons/icon-social-facebook.png" title="Facebook" alt="Notre page Facebook"></a></li>
         </ul>
     </nav>
-    <p class="cj-credits"><?php bloginfo('name'); ?>. Tous droits réservés. &copy; <?php echo date('Y'); ?></p>
+    <p class="cj-credits"><a href="/wp-admin" target="_blank" rel="noopener" class="nolink"><?php bloginfo('name'); ?></a>. Tous droits réservés. &copy; <?php echo date('Y'); ?></p>
 </footer>
 
 <?php wp_footer(); ?>
