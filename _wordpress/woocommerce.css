@@ -129,12 +129,14 @@ License: none (public domain)
     line-height: 1.2;
 }
 
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-title,
 .theme-carrementnous .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-family: 'Baloo Bhaina 2', monospace;
     font-size: 21px;
     color: black;
 }
 
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product .price,
 .theme-carrementnous .woocommerce ul.products li.product .price {
     position: relative;
     font-family: Arial, sans-serif;
@@ -142,11 +144,14 @@ License: none (public domain)
     color: var(--purple);
 }
 
+
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product .price span,
 .theme-carrementnous .woocommerce ul.products li.product .price span {
     position: relative;
     z-index: 1;
 }
 
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product .price::after,
 .theme-carrementnous .woocommerce ul.products li.product .price::after {
     content: "";
     position: absolute;
@@ -160,6 +165,29 @@ License: none (public domain)
 .theme-carrementnous .woocommerce .star-rating span {
     color: var(--lemon);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.theme-carrementnous.woocommerce-cart h2:not(.wc-block-cart__empty-cart__title) {
+    margin-bottom: 15px;
+    text-decoration: underline;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--purple);
+}
+
+.theme-carrementnous.woocommerce-cart .wc-block-cart__empty-cart__title {
+    font-size: 16px;
+    color: var(--blue);
+}
+
+.theme-carrementnous.woocommerce-cart .wp-block-separator.is-style-dots {
+    margin: 60px 0;
+}
+.theme-carrementnous.woocommerce-cart .wp-block-separator.is-style-dots::before {
+    content: "◆ ◆ ◆";
+    letter-spacing: 0;
+    padding: 0;
+    color: var(--pink);
 }
 
 .theme-carrementnous .woocommerce .upsells.products h2,
@@ -195,6 +223,12 @@ License: none (public domain)
     font-weight: 700;
 }
 
+.theme-carrementnous .woocommerce-MyAccount-content fieldset legend {
+    margin: 20px 0;
+    font-weight: 700;
+    font-size: 22px;
+}
+
 /***********************************************
  * Section        : Mise en page
  * Description    : Elements visuels
@@ -218,27 +252,40 @@ License: none (public domain)
     border-color: var(--purple);
 }
 
+
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product a img,
 .theme-carrementnous .woocommerce ul.products li.product a img {
     border: 4px solid var(--gray);
     box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
+
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-link {
+    text-decoration: none;
+}
+
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product a:hover .wc-block-grid__product-title,
 .theme-carrementnous .woocommerce ul.products li.product a:hover .woocommerce-loop-product__title {
     color: var(--plum);
 }
 
+
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product a:hover ~ .wc-block-grid__product-add-to-cart .add_to_cart_button,
 .theme-carrementnous .woocommerce ul.products li.product a:hover + a.add_to_cart_button.button {
     background-color: var(--yellow);
 }
 
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product a:hover .price,
 .theme-carrementnous .woocommerce ul.products li.product a:hover .price {
     color: rgba(0,0,0,0.85);
     font-weight: 700;
 }
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product a:hover .price::after,
 .theme-carrementnous .woocommerce ul.products li.product a:hover .price::after {
     background-color: var(--sand);
 }
 
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product a:hover img,
 .theme-carrementnous .woocommerce ul.products li.product a:hover img {
     border-color: var(--plum);
 }
@@ -259,6 +306,7 @@ License: none (public domain)
     margin-top: 0;
 }
 
+.theme-carrementnous.woocommerce-page ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-title,
 .theme-carrementnous .woocommerce .related.products ul.products li.product .woocommerce-loop-product__title,
 .theme-carrementnous .woocommerce .upsells.products ul.products li.product .woocommerce-loop-product__title {
     font-size: 16px;
@@ -267,6 +315,32 @@ License: none (public domain)
 
 .theme-carrementnous .is-large.wc-block-cart .wc-block-cart-items td {
     padding: 10px 0 10px 15px;
+}
+
+.theme-carrementnous .woocommerce-Addresses {
+    margin-top: 30px;
+}
+
+.theme-carrementnous .woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    margin-left: 0;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.theme-carrementnous .woocommerce-MyAccount-navigation-link {
+    padding: .5em;
+    background-color: var(--pink);
+}
+.theme-carrementnous .woocommerce-MyAccount-navigation-link:hover {
+    background-color: var(--yellow);
+}
+.theme-carrementnous .woocommerce-MyAccount-navigation-link.is-active {
+    background-color: var(--gray);
+}
+.theme-carrementnous .woocommerce-MyAccount-navigation-link + .woocommerce-MyAccount-navigation-link {
+    border-top: 1px solid rgba(0,0,0,0.5);
+}
+.theme-carrementnous .woocommerce-MyAccount-navigation-link a {
+    text-decoration: none;
 }
 
 /***********************************************
@@ -282,6 +356,10 @@ License: none (public domain)
     border: none;
 }
 
+.theme-carrementnous form .button,
+.theme-carrementnous .button.wc-forward,
+.theme-carrementnous .woocommerce-Button.button,
+.theme-carrementnous .woocommerce-button.button,
 .theme-carrementnous .wp-element-button,
 .theme-carrementnous .wc-block-cart__submit-button,
 .theme-carrementnous .woocommerce button.single_add_to_cart_button.button,
@@ -296,6 +374,10 @@ License: none (public domain)
     transition: all 250ms linear;
 }
 
+.theme-carrementnous form .button:hover,
+.theme-carrementnous .button.wc-forward:hover,
+.theme-carrementnous .woocommerce-Button.button:hover,
+.theme-carrementnous .woocommerce-button.button:hover,
 .theme-carrementnous .wp-element-button:hover,
 .theme-carrementnous .wc-block-cart__submit-button:hover,
 .theme-carrementnous .woocommerce button.single_add_to_cart_button.button:hover,
@@ -304,6 +386,10 @@ License: none (public domain)
     background-color: var(--yellow);
 }
 
+.theme-carrementnous form .button:active,
+.theme-carrementnous .button.wc-forward:active,
+.theme-carrementnous .woocommerce-Button.button:active,
+.theme-carrementnous .woocommerce-button.button:active,
 .theme-carrementnous .wp-element-button:active,
 .theme-carrementnous .wc-block-cart__submit-button:active,
 .theme-carrementnous .woocommerce button.single_add_to_cart_button.button:active,
@@ -344,4 +430,20 @@ License: none (public domain)
 
 .theme-carrementnous .woocommerce .quantity .qty {
     height: 30px;
+}
+
+.theme-carrementnous .woocommerce .select2-container .select2-selection--single{
+    height: 46px;
+}
+.theme-carrementnous .woocommerce .select2-container .select2-selection--single .select2-selection__rendered  {
+    position: relative;
+}
+.theme-carrementnous .woocommerce .select2-container .select2-selection--single .select2-selection__arrow,
+.theme-carrementnous .woocommerce .select2-container .select2-selection--single .select2-selection__rendered  {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.theme-carrementnous .woocommerce input {
+    padding: 1em;
 }
