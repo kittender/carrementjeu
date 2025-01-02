@@ -109,4 +109,48 @@ function save_four_pages_meta($post_id) {
     }
 }
 add_action('save_post', 'save_four_pages_meta');
+
+function ajouter_customizer_page_contact( $wp_customize ) {
+    // Ajouter une section dans le customizer
+    $wp_customize->add_section( 'section_network', array(
+        'title'    => __( 'Contact et réseaux', 'carrement-nous' ),
+        'priority' => 30,
+    ) );
+
+    // Ajouter un réglage pour le lien de la page de contact
+    $wp_customize->add_setting( 'contact_page_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw', // Validation de l'URL
+    ) );
+    $wp_customize->add_setting( 'instagram_page_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw', // Validation de l'URL
+    ) );
+
+    $wp_customize->add_setting( 'facebook_page_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw', // Validation de l'URL
+    ) );
+
+    // Ajouter un contrôle pour le réglage
+    $wp_customize->add_control( 'contact_page_link', array(
+        'label'    => __( 'Lien de la page de contact', 'carrement-nous' ),
+        'section'  => 'section_network',
+        'settings' => 'contact_page_link',
+        'type'     => 'url',
+    ) );
+    $wp_customize->add_control( 'instagram_page_link', array(
+        'label'    => __( 'Lien Instagram', 'carrement-nous' ),
+        'section'  => 'section_network',
+        'settings' => 'instagram_page_link',
+        'type'     => 'url',
+    ) );
+    $wp_customize->add_control( 'facebook_page_link', array(
+        'label'    => __( 'Lien Facebook', 'carrement-nous' ),
+        'section'  => 'section_network',
+        'settings' => 'facebook_page_link',
+        'type'     => 'url',
+    ) );
+}
+add_action( 'customize_register', 'ajouter_customizer_page_contact' );
 ?>

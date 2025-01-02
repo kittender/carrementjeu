@@ -12,9 +12,24 @@
         ));
         ?>
         <ul class="cj-socials-footer">
-            <li><a href="#"><img src="<?php echo THEME_ASSETS; ?>/icons/icon-social-contact.png" title="Contact" alt="Envoyez-nous un message"></a></li>
-            <li><a href="#"><img src="<?php echo THEME_ASSETS; ?>/icons/icon-social-instagram.png" title="Instagram" alt="Notre compte Instagram"></a></li>
-            <li><a href="#"><img src="<?php echo THEME_ASSETS; ?>/icons/icon-social-facebook.png" title="Facebook" alt="Notre page Facebook"></a></li>
+            <?php
+            $contact_page_url = get_theme_mod( 'contact_page_link', '' ); // Valeur par défaut : chaîne vide
+            if ( !empty( $contact_page_url ) ) {
+                echo '<li><a href="' . esc_url( $contact_page_url ) . '"><img src="' . THEME_ASSETS  . '/icons/icon-social-contact.png" title="Contact" alt="Envoyez-nous un message"></a></li>';
+            }
+            ?>
+            <?php
+            $instagram_page_url = get_theme_mod( 'instagram_page_link', '' ); // Valeur par défaut : chaîne vide
+            if ( !empty( $instagram_page_url ) ) {
+                echo '<li><a href="' . esc_url( $instagram_page_url ) . '" target="_blank"><img src="' . THEME_ASSETS  . '/icons/icon-social-instagram.png" title="Instagram" alt="Notre compte Instagram"></a></li>';
+            }
+            ?>
+            <?php
+            $facebook_page_url = get_theme_mod( 'facebook_page_link', '' ); // Valeur par défaut : chaîne vide
+            if ( !empty( $facebook_page_url ) ) {
+                echo '<li><a href="' . esc_url( $facebook_page_url ) . '" target="_blank"><img src="' . THEME_ASSETS  . '/icons/icon-social-facebook.png" title="Facebook" alt="Notre page Facebook"></a></li>';
+            }
+            ?>
         </ul>
     </nav>
     <p class="cj-credits"><a href="/wp-admin" target="_blank" rel="noopener" class="nolink"><?php bloginfo('name'); ?></a>. Tous droits réservés. &copy; <?php echo date('Y'); ?></p>

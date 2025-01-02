@@ -47,8 +47,8 @@
 </nav>
 
 <nav class="cj-shophead">
-    <img width="32" height="32" src="<?php echo THEME_ASSETS; ?>/icons/shop.png" />
-    <a href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>">Nos produits</a>
+    <a href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>"><img width="32" height="32" src="<?php echo THEME_ASSETS; ?>/icons/shop.png" /></a>
+    <a class="cj-shophead-link" href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>">Nos produits</a>
 
     <?php
     $categories = get_terms( array(
@@ -68,11 +68,11 @@
 
     <div class="cj-shophead-user">
     <?php if ( is_user_logged_in() ) : ?>
-        <img width="32" height="32" src="<?php echo THEME_ASSETS; ?>/icons/account.png" />
+        <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>"><img width="32" height="32" src="<?php echo THEME_ASSETS; ?>/icons/account.png" /></a>
         <a class="cj-shophead-link" href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>">Compte client</a>
     <?php else : ?>
-        <img width="32" height="32" src="<?php echo THEME_ASSETS; ?>/icons/account.png" />
-        <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>">Se connecter</a>
+        <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>"><img width="32" height="32" src="<?php echo THEME_ASSETS; ?>/icons/account.png" /></a>
+        <a class="cj-shophead-link" href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>">Se connecter</a>
     <?php endif; ?>
     </div>
 </nav>

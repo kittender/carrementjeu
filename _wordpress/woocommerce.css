@@ -13,6 +13,7 @@ License: none (public domain)
 .cj-shophead-categories {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cj-shophead {
@@ -24,7 +25,6 @@ License: none (public domain)
     box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-.cj-shophead-categories > * + *,
 .cj-shophead-user > * + *,
 .cj-shophead > * + * {
     margin-left: 10px;
@@ -35,46 +35,78 @@ License: none (public domain)
 }
 
 .cj-shophead-categories {
+    flex: 1;
     font-size: 14px;
 }
 .cj-shophead-categories a {
     display: inline-block;
+    margin: 2px 5px 2px 0;
     padding: 2px 5px;
     text-decoration: none;
-    background-color: var(--pink);
+    background-color: var(--gray);
     border-radius: 100px;
 }
 
-.cj-shophead-categories li:nth-child(10n+1) a {
-    background-color: var(--mandarin);
+.cj-shop-notice {
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    padding: 10px 20px 7px;
+    text-align: center;
+    font-family: 'Baloo Bhaina 2', monospace;
+    font-size: 16px;
 }
-.cj-shophead-categories li:nth-child(10n+2) a {
-    background-color: var(--rose);
+.cj-shop-notice-link {
+    display: inline-block;
+    width: auto;
+    margin: auto;
 }
-.cj-shophead-categories li:nth-child(10n+3) a {
-    background-color: var(--lemon);
+
+
+
+/***********************************************
+ * Section        : Responsive
+ ***********************************************/
+
+@media (max-width: 1200px)  {
+    .cj-shophead {
+        border-radius: 0;
+    }
 }
-.cj-shophead-categories li:nth-child(10n+4) a {
-    background-color: var(--lime);
+
+@media (max-width: 1100px)  {
+    .cj-shophead {
+        padding: 5px 10px;
+    }
+    .cj-shophead a + .cj-shophead-link {
+        display: none;
+    }
+    .cj-shophead img {
+        width: 42px;
+    }
 }
-.cj-shophead-categories li:nth-child(10n+5) a {
-    background-color: var(--horizon);
+@media (max-width: 760px) {
+    .cj-shophead {
+        padding: 0 10px;
+    }
+    .cj-shophead-categories a {
+        margin: 0;
+        padding: 8px 13px;
+        border-radius: 0;
+    }
 }
-.cj-shophead-categories li:nth-child(10n+6) a {
-    background-color: var(--plum);
+@media (max-width: 560px) {
+    .cj-shophead-categories {
+        display: none;
+    }
+    .cj-shophead img {
+        width: 32px;
+    }
+    .cj-shophead a + .cj-shophead-link {
+        display: inline;
+    }
 }
-.cj-shophead-categories li:nth-child(10n+7) a {
-    background-color: var(--horizon);
-}
-.cj-shophead-categories li:nth-child(10n+8) a {
-    background-color: var(--plum);
-}
-.cj-shophead-categories li:nth-child(10n+9) a {
-    background-color: var(--brick);
-}
-.cj-shophead-categories li:nth-child(10n+10) a {
-    background-color: var(--lemon);
-}
+
 
 /***********************************************
  * Section        : Typographie
