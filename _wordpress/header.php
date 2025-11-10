@@ -19,6 +19,8 @@
     <div class="cj-mif">
         <img src="<?php echo THEME_ASSETS; ?>/icons/icon-mif.png" title="Made In France" alt="Logo MIF">
         <p>Conçu et Fabriqué en France</p>
+        <span class="flex-break"></span>
+        <img class="cj-mif-tdp" src="<?php echo THEME_ASSETS; ?>/images/landes-terre-des-possibles.jpg" title="Landes, Terre des Possibles" alt="Logo de la marque Landes">
     </div>
     <a href="<?php echo wc_get_cart_url(); ?>" class="cj-cart">
         <img src="<?php echo THEME_ASSETS; ?>/icons/icon-shop-cart.png" alt="🛒">

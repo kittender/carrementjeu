@@ -476,6 +476,6 @@ License: none (public domain)
     transform: translateY(-50%);
 }
 
-.theme-carrementnous .woocommerce input {
+.theme-carrementnous .woocommerce input:not(.qty) {
     padding: 1em;
 }

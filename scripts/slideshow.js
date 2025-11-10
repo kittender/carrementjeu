@@ -46,12 +46,11 @@
 
     // Auto-slideshow
     setInterval(() => {
-        // Next
         if(firstVisibleSlide < products.length - responsive()) {
             firstVisibleSlide++;
             moveSlides(firstVisibleSlide);
         } else {
-            firstVisibleSlide = 1;
+            firstVisibleSlide = 0;
             moveSlides(firstVisibleSlide);
         }
     }, 2500);

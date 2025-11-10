@@ -40,8 +40,16 @@ License: none (public domain)
 
 @media (max-width: 760px) {
     .cj-mif {
+        margin-left: 0;
         align-self: flex-end;
         font-size: 14px;
+    }
+  
+    .cj-mif .cj-mif-tdp {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 135px;
     }
 
     .cj-menu {
@@ -58,6 +66,19 @@ License: none (public domain)
 
     .cj-footer li {
         padding: 5px;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 760px) {
+    .cj-mif {
+        position: absolute;
+        top: 180px;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+	.admin-bar .cj-mif {
+        top: 220px;
     }
 }
 
@@ -79,6 +100,12 @@ License: none (public domain)
         left: 0;
         width: 100%;
         justify-content: center;
+    }
+  
+    .cj-mif .cj-mif-tdp {
+        width: 120px;
+        top: -35px;
+        right: auto;
     }
 
     .cj-navigation {
@@ -123,7 +150,7 @@ License: none (public domain)
         display: block;
     }
     .cj-mif {
-        top: 145px;
+        top: 100px;
     }
 }
 
